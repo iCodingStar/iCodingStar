@@ -8,9 +8,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Editor</title>
+    <title>Title</title>
 </head>
 <body>
-<a href="editor.html">提笔写文章</a>
+
 </body>
 </html>
