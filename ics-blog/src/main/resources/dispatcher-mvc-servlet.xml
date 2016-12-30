@@ -10,7 +10,7 @@
     <!--支持注解驱动-->
     <mvc:annotation-driven/>
 
-    <bean id="urlMapping" class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" />
+    <bean id="urlMapping" class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/>
 
     <!-- 配置velocity引擎 -->
     <bean id="velocityConfigurer" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
@@ -48,8 +48,8 @@
           class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="locations">
             <list>
-                <value>classpath:config/config.properties</value>
-                <value>classpath:config/velocity.properties</value>
+                <value>classpath:props/config.properties</value>
+                <value>classpath:props/velocity.properties</value>
             </list>
         </property>
     </bean>
