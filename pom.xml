@@ -39,7 +39,9 @@
         <mockito.version>1.10.19</mockito.version>
         <derby.version>10.7.1.1</derby.version>
         <jackson.version>1.9.11</jackson.version>
-
+        <htmlcleaner.version>2.18</htmlcleaner.version>
+        <velocity.version>1.7</velocity.version>
+        <velocity.tools.version>2.0</velocity.tools.version>
         <jetty-version>6.1.22</jetty-version>
         <jetty.access.port>8888</jetty.access.port>
     </properties>
@@ -176,6 +178,23 @@
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-oxm</artifactId>
                 <version>${spring.version}</version>
+            </dependency>
+
+            <!--velocity 模板-->
+            <dependency>
+                <groupId>net.sourceforge.htmlcleaner</groupId>
+                <artifactId>htmlcleaner</artifactId>
+                <version>${htmlcleaner.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.velocity</groupId>
+                <artifactId>velocity</artifactId>
+                <version>${velocity.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.velocity</groupId>
+                <artifactId>velocity-tools</artifactId>
+                <version>${velocity.tools.version}</version>
             </dependency>
 
             <!--用于json数据与Java对象之间的转换-->

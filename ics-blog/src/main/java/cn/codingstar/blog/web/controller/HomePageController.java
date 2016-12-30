@@ -1,5 +1,9 @@
 package cn.codingstar.blog.web.controller;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
 /**
  * Description: HomePageController
  *
@@ -16,7 +20,15 @@ package cn.codingstar.blog.web.controller;
  *          ------------------------------------------------------------------
  *          2016/12/29           iCodingStar       1.0       1.0 Version
  */
+@RequestMapping("/HomePage/*")
+@Controller
 public class HomePageController {
 
+    @RequestMapping("/Index")
+    public ModelAndView getHomePage(){
+        ModelAndView mav = new ModelAndView("");
+
+        return mav;
+    }
 
 }
