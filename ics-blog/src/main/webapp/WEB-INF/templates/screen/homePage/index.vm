@@ -1,1 +1,3 @@
 $user 的博客首页
+
+<a href="${rc.contextPath}/${user}/article/write">提笔写文章</a>

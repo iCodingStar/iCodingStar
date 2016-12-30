@@ -24,9 +24,13 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class HomePageController {
 
-    @RequestMapping("/index.html")
+    @RequestMapping("/index")
     public ModelAndView getHomePage(){
         ModelAndView mav = new ModelAndView("homePage/index");
+        // 1. 获取文章列表
+        // 2. 获取标签列表
+        // 3. 获取排行榜信息
+
         mav.addObject("user","iCodingStar");
         return mav;
     }
