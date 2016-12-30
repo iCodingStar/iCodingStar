@@ -28,7 +28,6 @@
         <dependency>
             <groupId>net.sourceforge.htmlcleaner</groupId>
             <artifactId>htmlcleaner</artifactId>
-            <version>2.18</version>
         </dependency>
         <dependency>
             <groupId>org.apache.velocity</groupId>
