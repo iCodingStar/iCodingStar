@@ -20,14 +20,14 @@ import org.springframework.web.servlet.ModelAndView;
  *          ------------------------------------------------------------------
  *          2016/12/29           iCodingStar       1.0       1.0 Version
  */
-@RequestMapping("/HomePage/*")
+@RequestMapping("/homePage/*")
 @Controller
 public class HomePageController {
 
-    @RequestMapping("/Index")
+    @RequestMapping("/index.html")
     public ModelAndView getHomePage(){
-        ModelAndView mav = new ModelAndView("");
-
+        ModelAndView mav = new ModelAndView("homePage/index");
+        mav.addObject("user","iCodingStar");
         return mav;
     }
 
