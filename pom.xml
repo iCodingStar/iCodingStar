@@ -9,9 +9,6 @@
         <module>ics-home</module>
         <module>ics-common</module>
         <module>ics-blog</module>
-        <module>ics-dao</module>
-        <module>ics-service</module>
-        <module>ics-client</module>
     </modules>
     <packaging>pom</packaging>
 
