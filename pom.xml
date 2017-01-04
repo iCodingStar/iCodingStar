@@ -7,7 +7,6 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>ics-home</module>
-        <module>ics-common</module>
         <module>ics-blog</module>
     </modules>
     <packaging>pom</packaging>
