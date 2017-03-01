@@ -11,6 +11,7 @@
         <module>ics-api</module>
         <module>ics-common</module>
         <module>ics-user</module>
+        <module>ics-book</module>
     </modules>
     <packaging>pom</packaging>
 
