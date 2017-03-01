@@ -12,9 +12,26 @@
     <name>ics-api</name>
     <url>http://maven.apache.org</url>
     <dependencies>
+        <!-- unit test dependency start-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
+        </dependency>
+        <!-- unit test dependency end-->
+
+        <dependency>
+            <groupId>cn.codingstar.user</groupId>
+            <artifactId>user-center</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.codingstar.blog</groupId>
+            <artifactId>blog-center</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
     <build>
