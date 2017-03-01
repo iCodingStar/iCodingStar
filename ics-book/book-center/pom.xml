@@ -1,0 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>ics-book</artifactId>
+        <groupId>cn.codingstar</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>cn.codingstar</groupId>
+    <artifactId>book-center</artifactId>
+    <packaging>pom</packaging>
+
+    <name>book-center</name>
+    <url>http://maven.apache.org</url>
+    <modules>
+        <module>book-client</module>
+        <module>book-service</module>
+        <module>book-dao</module>
+        <module>book-model</module>
+        <module>book-common</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>

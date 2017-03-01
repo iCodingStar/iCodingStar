@@ -22,15 +22,28 @@
             <artifactId>junit</artifactId>
         </dependency>
         <!-- unit test dependency end-->
-
         <dependency>
-            <groupId>cn.codingstar.user</groupId>
-            <artifactId>user-center</artifactId>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>cn.codingstar.user</groupId>-->
+            <!--<artifactId>user-center</artifactId>-->
+            <!--<version>1.0-SNAPSHOT</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>cn.codingstar.blog</groupId>-->
+            <!--<artifactId>blog-center</artifactId>-->
+            <!--<version>1.0-SNAPSHOT</version>-->
+        <!--</dependency>-->
+        <dependency>
+            <groupId>cn.codingstar</groupId>
+            <artifactId>ics-common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>cn.codingstar.blog</groupId>
-            <artifactId>blog-center</artifactId>
+            <groupId>cn.codingstar</groupId>
+            <artifactId>ics-book</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
