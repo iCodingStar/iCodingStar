@@ -9,14 +9,12 @@
     <groupId>cn.codingstar.home</groupId>
     <artifactId>home-web</artifactId>
     <packaging>war</packaging>
-    <name>home-web Maven Webapp</name>
+    <name>home-web</name>
     <url>http://maven.apache.org</url>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
         </dependency>
     </dependencies>
     <build>
