@@ -24,17 +24,19 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class UserController {
 
 
-    @RequestMapping("/login/{userName}/{password}")
+    @RequestMapping(value = {"/login"})
     @ResponseBody
     public String login(String userName,
                         String password){
 
-        return "";
+        return "ok";
     }
 
+    @RequestMapping(value = {"/register"})
+    @ResponseBody
     public String register(String userName,
                            String password,
                            String confirmPassword){
-        return "";
+        return "ok";
     }
 }
