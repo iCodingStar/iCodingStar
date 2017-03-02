@@ -6,12 +6,12 @@
     <artifactId>iCodingStar</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>ics-home</module>
         <module>ics-blog</module>
         <module>ics-api</module>
         <module>ics-common</module>
-        <module>ics-user</module>
         <module>ics-book</module>
+        <module>ics-user</module>
+        <module>ics-home</module>
     </modules>
     <packaging>pom</packaging>
 

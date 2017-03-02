@@ -2,12 +2,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>home-center</artifactId>
-        <groupId>cn.codingstar.home</groupId>
+        <groupId>cn.codingstar</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>cn.codingstar.home</groupId>
+    <groupId>cn.codingstar</groupId>
     <artifactId>home-client</artifactId>
     <packaging>jar</packaging>
 

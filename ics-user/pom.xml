@@ -7,7 +7,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>cn.codingstar.user</groupId>
+    <groupId>cn.codingstar</groupId>
     <artifactId>ics-user</artifactId>
     <packaging>pom</packaging>
 
@@ -15,6 +15,7 @@
     <url>http://maven.apache.org</url>
     <modules>
         <module>user-center</module>
+        <module>user-web</module>
     </modules>
 
     <properties>

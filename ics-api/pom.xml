@@ -21,6 +21,21 @@
             <artifactId>ics-book</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>cn.codingstar</groupId>
+            <artifactId>ics-home</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.codingstar</groupId>
+            <artifactId>ics-user</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.codingstar</groupId>
+            <artifactId>ics-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
     <build>
         <finalName>ics-api</finalName>
