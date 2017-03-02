@@ -23,15 +23,10 @@
     <!--配置SqlSessionFactory-->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
-        <property name="typeAliasesPackage" value="cn.cug.laboratory.mapper,cn.cug.laboratory.mapper.extend"/>
+        <property name="typeAliasesPackage" value="cn.codingstar.user.mapper"/>
         <property name="mapperLocations"
-                  value="classpath:cn/cug/laboratory/mapper/*.xml,classpath:cn/cug/laboratory/mapper/extend/*.xml" />
+                  value="classpath:cn/codingstar/user/mapper/*.xml" />
     </bean>
 
     <!--配置Mapper代理实现类-->
-    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="cn.cug.laboratory.mapper,cn.cug.laboratory.mapper.extend" />
-        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
-    </bean>
-
 </beans>
