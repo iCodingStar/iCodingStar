@@ -2,7 +2,7 @@ package cn.codingstar.model.persistent;
 
 import java.util.Date;
 
-public class webUser {
+public class WebUser {
     private Integer id;
 
     private Date createTime;

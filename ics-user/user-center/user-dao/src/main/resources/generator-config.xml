@@ -47,7 +47,7 @@
 
 
         <!-- 这里是数据库的表名table_user 以及 POJO类的名字User -->
-        <table tableName="web_user" domainObjectName="webUser"
+        <table tableName="web_user" domainObjectName="WebUser"
                enableCountByExample="true" enableSelectByExample="true"
                enableUpdateByExample="true" enableDeleteByExample="true">
         </table>
