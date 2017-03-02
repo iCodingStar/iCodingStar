@@ -1,5 +1,7 @@
 package cn.codingstar.user.client;
 
+import cn.codingstar.model.persistent.WebUser;
+import cn.codingstar.user.common.UserResult;
 import cn.codingstar.user.service.WebUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,4 +28,10 @@ public class WebUserClient {
 
     @Autowired
     private WebUserService webUserService;
+
+    public UserResult<WebUser> register() {
+        UserResult<WebUser> result = new UserResult<>();
+
+        return result;
+    }
 }

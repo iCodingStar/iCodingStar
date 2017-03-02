@@ -23,5 +23,9 @@
             <groupId>cn.codingstar</groupId>
             <artifactId>user-service</artifactId>
         </dependency>
+        <dependency>
+            <groupId>cn.codingstar</groupId>
+            <artifactId>user-common</artifactId>
+        </dependency>
     </dependencies>
 </project>
