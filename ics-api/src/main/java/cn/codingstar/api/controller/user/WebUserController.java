@@ -5,6 +5,7 @@ import cn.codingstar.model.persistent.WebUser;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.xml.ws.RequestWrapper;
 
@@ -28,6 +29,7 @@ import javax.xml.ws.RequestWrapper;
 public class WebUserController {
 
     @RequestMapping(value = {"/register"}, method = {RequestMethod.GET, RequestMethod.POST})
+    @ResponseBody
     public ApiResult<WebUser> register() {
         ApiResult<WebUser> apiResult = new ApiResult<>();
         WebUser webUser = new WebUser();
@@ -40,6 +42,7 @@ public class WebUserController {
     }
 
     @RequestMapping(value = {"/login"}, method = RequestMethod.GET)
+    @ResponseBody
     public ApiResult<WebUser> login() {
         ApiResult<WebUser> apiResult = new ApiResult<>();
         WebUser webUser = new WebUser();
