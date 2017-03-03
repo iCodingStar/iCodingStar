@@ -49,7 +49,10 @@ public class WebUserController {
     @ResponseBody
     public ApiResult<WebUser> login(WebUser loginUser) {
         ApiResult<WebUser> apiResult = new ApiResult<>();
-
+        UserResult<WebUser> result = webUserClient.login(loginUser);
+        apiResult.setCode(result.getCode());
+        apiResult.setMessage(result.getMessage());
+        apiResult.setData(result.getData());
         return apiResult;
     }
 }
