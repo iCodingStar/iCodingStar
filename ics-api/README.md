@@ -1,5 +1,3 @@
-# iCodingStar - 专业的个人站点
-## 图书板块
 ## api docs
 ### module webUser api[用户板块api]
 0. code说明
