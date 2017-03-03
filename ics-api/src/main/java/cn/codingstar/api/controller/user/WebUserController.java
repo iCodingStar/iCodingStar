@@ -47,14 +47,9 @@ public class WebUserController {
 
     @RequestMapping(value = {"/login"}, method = RequestMethod.GET)
     @ResponseBody
-    public ApiResult<WebUser> login() {
+    public ApiResult<WebUser> login(WebUser loginUser) {
         ApiResult<WebUser> apiResult = new ApiResult<>();
-        WebUser webUser = new WebUser();
-        webUser.setId(1000);
-        webUser.setNickname("iCodingStar");
-        apiResult.setCode(200);
-        apiResult.setMessage("登陆成功！");
-        apiResult.setData(webUser);
+
         return apiResult;
     }
 }

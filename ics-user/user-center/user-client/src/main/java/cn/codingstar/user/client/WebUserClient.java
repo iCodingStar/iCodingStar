@@ -1,5 +1,6 @@
 package cn.codingstar.user.client;
 
+import cn.codingstar.common.constant.ResultType;
 import cn.codingstar.common.exception.BusinessException;
 import cn.codingstar.model.persistent.WebUser;
 import cn.codingstar.user.common.UserResult;
@@ -45,8 +46,27 @@ public class WebUserClient {
             result.setMessage(b.getMessage());
             return result;
         }
-        result.setCode(200);
-        result.setMessage("注册成功！");
+        result.setCode(ResultType.SUCCESS.getCode());
+        result.setMessage(ResultType.SUCCESS.getMessage());
+        result.setData(user);
+        return result;
+    }
+
+    public UserResult<WebUser> login(WebUser loginUser){
+        UserResult<WebUser> result = new UserResult<>();
+        WebUser user = null;
+        try {
+            user = webUserService.login(loginUser);
+        } catch (BusinessException b) {
+            logger.error("登陆失败！", b);
+            result.setCode(b.getCode());
+            result.setMessage(b.getMessage());
+            result.setData(user);
+            return result;
+        }
+        result.setCode(ResultType.SUCCESS.getCode());
+        result.setMessage(ResultType.SUCCESS.getMessage());
+        result.setData(user);
         return result;
     }
 }

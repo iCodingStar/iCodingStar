@@ -23,4 +23,6 @@ public interface WebUserService {
 
     WebUser register(WebUser registerUser);
 
+    WebUser login(WebUser loginUser);
+
 }
