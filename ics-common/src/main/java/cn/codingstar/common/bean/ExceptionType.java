@@ -23,8 +23,7 @@ public enum ExceptionType {
     PARAMETER_ILLEGAL(403, "参数无效"),
     USERNAME_PASSWORD_ERROR(601, "用户名或密码错误"),
     USER_NOT_FOUND(602, "用户不存在"),
-    USER_EXIST_ALREADY(603, "用户已存在"),
-    ;
+    USER_EXIST_ALREADY(603, "用户已存在");
 
     private int code;
 
