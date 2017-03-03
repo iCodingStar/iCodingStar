@@ -64,8 +64,8 @@ public class WebUserClient {
             result.setData(user);
             return result;
         }
-        result.setCode(ResultType.SUCCESS.getCode());
-        result.setMessage(ResultType.SUCCESS.getMessage());
+        result.setCode(ResultType.LOGIN_SUCCESS.getCode());
+        result.setMessage(ResultType.LOGIN_SUCCESS.getMessage());
         result.setData(user);
         return result;
     }

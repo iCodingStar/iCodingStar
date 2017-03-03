@@ -17,7 +17,8 @@ package cn.codingstar.common.constant;
  */
 public enum ResultType {
     SUCCESS(200, "请求成功"),
-    FAIL(500, "未知错误");
+    FAIL(500, "未知错误"),
+    LOGIN_SUCCESS(200, "登陆成功");
 
     private int code;
 

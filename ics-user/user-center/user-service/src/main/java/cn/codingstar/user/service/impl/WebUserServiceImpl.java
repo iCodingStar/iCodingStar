@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -47,7 +48,9 @@ public class WebUserServiceImpl implements WebUserService {
         ValidateUtils.required(webUser.getPassword());
         ValidateUtils.text(webUser.getUsername());
         ValidateUtils.text(webUser.getPassword());
-        ValidateUtils.check(checkUsername(webUser.getUsername()));
+        if (!checkUsername(webUser.getUsername())){
+            throw new BusinessException(ExceptionType.USER_EXIST_ALREADY);
+        }
         /*设置基本注册信息*/
         WebUser originWebUser = new WebUser();
         originWebUser.setUsername(webUser.getUsername());
@@ -100,12 +103,14 @@ public class WebUserServiceImpl implements WebUserService {
     private boolean checkUsername(String username) {
         WebUserExample example = new WebUserExample();
         WebUserExample.Criteria criteria = example.createCriteria();
-        if (username != null) {
-            criteria.andUsernameEqualTo(username);
-        } else {
+        criteria.andUsernameEqualTo(username);
+        List<WebUser> userList = null;
+        userList = webUserMapper.selectByExample(example);
+        if (!CollectionUtils.isEmpty(userList)) {
             return false;
+        }else {
+            return true;
         }
-        return ObjectUtils.isEmpty(webUserMapper.selectByExample(example));
     }
 
     /**
@@ -117,12 +122,8 @@ public class WebUserServiceImpl implements WebUserService {
     private WebUser getUserByUserName(String username) {
         WebUserExample example = new WebUserExample();
         WebUserExample.Criteria criteria = example.createCriteria();
-        if (username != null) {
-            criteria.andUsernameEqualTo(username);
-        } else {
-            return null;
-        }
-        List<WebUser> userList = new ArrayList<>();
+        criteria.andUsernameEqualTo(username);
+        List<WebUser> userList = null;
         userList = webUserMapper.selectByExample(example);
         if (CollectionUtils.isEmpty(userList)) {
             return null;
