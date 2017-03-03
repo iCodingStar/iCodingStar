@@ -38,7 +38,7 @@ public class WebUserClientTest extends AbstractSpringContextTest {
     public void loginTest() {
         WebUser webUser = new WebUser();
         webUser.setUsername("iCodingStar");
-        webUser.setPassword("xs12346");
+        webUser.setPassword("xs1234");
         UserResult<WebUser> result = webUserClient.login(webUser);
         System.out.println(result);
     }
