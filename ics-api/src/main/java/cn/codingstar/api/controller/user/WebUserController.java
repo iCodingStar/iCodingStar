@@ -2,6 +2,9 @@ package cn.codingstar.api.controller.user;
 
 import cn.codingstar.common.result.ApiResult;
 import cn.codingstar.model.persistent.WebUser;
+import cn.codingstar.user.client.WebUserClient;
+import cn.codingstar.user.common.UserResult;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -28,16 +31,17 @@ import javax.xml.ws.RequestWrapper;
 @RequestMapping("/webUser")
 public class WebUserController {
 
+    @Autowired
+    private WebUserClient webUserClient;
+
     @RequestMapping(value = {"/register"}, method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public ApiResult<WebUser> register() {
+    public ApiResult<WebUser> register(WebUser registerUser) {
         ApiResult<WebUser> apiResult = new ApiResult<>();
-        WebUser webUser = new WebUser();
-        webUser.setId(1000);
-        webUser.setNickname("iCodingStar");
-        apiResult.setCode(200);
-        apiResult.setMessage("注册成功！");
-        apiResult.setData(webUser);
+        UserResult<WebUser> result = webUserClient.register(registerUser);
+        apiResult.setCode(result.getCode());
+        apiResult.setMessage(result.getMessage());
+        apiResult.setData(result.getData());
         return apiResult;
     }
 

@@ -1,8 +1,11 @@
 package cn.codingstar.user.client;
 
+import cn.codingstar.common.exception.BusinessException;
 import cn.codingstar.model.persistent.WebUser;
 import cn.codingstar.user.common.UserResult;
 import cn.codingstar.user.service.WebUserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,12 +29,24 @@ import javax.xml.transform.Result;
 @Service("webUserClient")
 public class WebUserClient {
 
+    private static Logger logger = LoggerFactory.getLogger(WebUserClient.class);
+
     @Autowired
     private WebUserService webUserService;
 
-    public UserResult<WebUser> register() {
+    public UserResult<WebUser> register(WebUser registerUser) {
         UserResult<WebUser> result = new UserResult<>();
-
+        WebUser user = null;
+        try {
+            user = webUserService.register(registerUser);
+        } catch (BusinessException b) {
+            logger.error("注册失败！", b);
+            result.setCode(b.getCode());
+            result.setMessage(b.getMessage());
+            return result;
+        }
+        result.setCode(200);
+        result.setMessage("注册成功！");
         return result;
     }
 }

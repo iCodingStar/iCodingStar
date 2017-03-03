@@ -22,12 +22,18 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.codingstar</groupId>
+            <artifactId>ics-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.codingstar</groupId>
+            <artifactId>user-common</artifactId>
         </dependency>
     </dependencies>
 </project>

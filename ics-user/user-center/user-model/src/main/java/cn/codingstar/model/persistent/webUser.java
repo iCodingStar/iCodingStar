@@ -1,13 +1,9 @@
 package cn.codingstar.model.persistent;
 
-import java.util.Date;
 
-public class WebUser {
-    private Integer id;
+import cn.codingstar.common.authorization.AuthorizationHelper;
 
-    private Date createTime;
-
-    private Date updateTime;
+public class WebUser extends BaseModel{
 
     private String username;
 
@@ -20,30 +16,6 @@ public class WebUser {
     private String nickname;
 
     private Boolean enable;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public Date getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
-    }
 
     public String getUsername() {
         return username;
@@ -91,5 +63,17 @@ public class WebUser {
 
     public void setEnable(Boolean enable) {
         this.enable = enable;
+    }
+
+    public void encodePassword() {
+        this.password = AuthorizationHelper.encodePassword(this.password, this.passwordSalt);
+    }
+
+    public boolean checkPassword(String password) {
+        return this.password.equals(AuthorizationHelper.encodePassword(password, this.passwordSalt));
+    }
+
+    public void generateToken() {
+        this.token = AuthorizationHelper.generateToken(this.username, this.password);
     }
 }
